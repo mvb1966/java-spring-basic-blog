@@ -24,7 +24,10 @@ private PostRepository postRepository;
 		modelMap.put("posts",list);
 		return "home";
 	}
+	@RequestMapping ("/post/{id}")
 	public String postDetails(@PathVariable Long id, ModelMap modelMap){
+		Post post = postRepository.findById(id);
+		modelMap.put("post", post);
 		return "post-details";
 	}
 }
