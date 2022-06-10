@@ -20,7 +20,6 @@ private PostRepository postRepository;
 	@RequestMapping ("/")
 	public String listPosts(ModelMap modelMap){
 		List<Post> list= postRepository.getAllPosts();
-		modelMap.put("title","Blog Post 1");
 		modelMap.put("posts",list);
 		return "home";
 	}
