@@ -71,6 +71,13 @@
 			<artifactId>surefire-junit4</artifactId>
 			<version>2.22.2</version>
 		</dependency>
+
+		<!-- Apache PDFBox for PDF manipulation (used in Stirling-PDF) -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>3.0.6</version>
+		</dependency>
 	</dependencies>
 
 	<build>
