@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'spring-boot-blog'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['blog-app:8080']
+        labels:
+          application: 'blog'

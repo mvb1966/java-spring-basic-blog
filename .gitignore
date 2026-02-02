@@ -93,3 +93,7 @@ build/
 .vscode/
 
 .DS_Store
+
+# Monitoring data
+monitoring/grafana/data/
+monitoring/prometheus/data/
