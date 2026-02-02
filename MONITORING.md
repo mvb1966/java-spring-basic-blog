@@ -39,9 +39,42 @@ The monitoring stack consists of:
 
 The dashboard "Spring Boot Blog Dashboard" will be automatically provisioned and available.
 
-## Dashboard Panels
+## Available Dashboards
 
-The pre-configured dashboard includes:
+### 1. Spring Boot Blog Dashboard
+The main dashboard with organized sections using collapsible row headers:
+
+**🚀 Application Overview**
+- **Application Uptime**: Shows how long the application has been running (gauge)
+- **CPU Usage**: Current CPU utilization (gauge with thresholds)
+
+**📊 HTTP Request Metrics**
+- **HTTP Request Rate**: Real-time request rate per endpoint (time series)
+- **HTTP Request Duration**: Average response time per endpoint (time series)
+
+**💾 JVM Memory & Performance**
+- **JVM Memory Usage**: Memory consumption by different JVM areas (time series)
+- **CPU Usage**: Application and system CPU usage over time (time series)
+- **JVM Threads**: Live and daemon thread counts (time series)
+
+### 2. Spring Boot - Request History Dashboard
+A secondary dashboard focused on request history with table layout:
+
+**📈 Test History**
+- **Request History Panel**: Table view of HTTP requests with organized columns
+
+**📊 Request Statistics**
+- HTTP request rate and duration charts
+
+## Dashboard Layout Features
+
+All dashboards now use:
+- **Row Headers**: Collapsible sections with emoji icons for better organization
+- **Modern Panel Configuration**: Updated to Grafana 10.x schema
+- **Consistent Datasource References**: Using UID-based datasource configuration
+- **Responsive Grid Layout**: Panels automatically adjust to screen size
+
+## Dashboard Panels
 
 1. **Application Uptime**: Shows how long the application has been running
 2. **HTTP Request Rate**: Real-time request rate per endpoint
@@ -49,6 +82,8 @@ The pre-configured dashboard includes:
 4. **JVM Memory Usage**: Memory consumption by different JVM areas
 5. **CPU Usage**: Application and system CPU usage
 6. **JVM Threads**: Number of live and daemon threads
+
+Note: The legacy panel list above is now organized into sections with row headers for better visualization.
 
 ## Metrics Endpoints
 
